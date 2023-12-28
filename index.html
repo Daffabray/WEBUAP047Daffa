@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1"> 
+                    <th>Kode</th>
+                    <th>Barang</th>
+                    <th>Harga</th>
+                <tr>
+                    <td>001</td>
+                    <td>Barang A</td>
+                    <td>10.000</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Barang B</td>
+                    <td>20.000</td>
+                </tr>
+                <tr>
+                    <td>003</td>
+                    <td>Barang C</td>
+                    <td>30.000</td>
+                </tr>       
+    </table> 
+    <h2>Inputan User</h2>
+    <br>
+        <label>Masukan Kode :</label>
+        <input type="text" name="kode" id="kode">
+    <br/>
+        <label>Banyaknya Barang :</label>
+        <input type="text" name="barang" id="barang">
+    <br>
+        <button type="submit" id="btnsubmit">Submit</button>
+    <script>
+        var kode = document.getElementById("kode");
+        var barang = document.getElementById("barang");
+        var uang
+        var kembalian
+       
+        function hitung(kode,barang){
+            if(kode == '001'){
+                hasil = barang * 10000
+                window.alert("Total Pembayaran anda adalah :"+hasil)
+                uang = window.prompt("Masukkan uang : ")
+                kembalian = uang - hasil
+                window.alert("Kembalian anda adalah : " + kembalian)    
+                console.log("uang user"+uang)
+
+            }else if(kode == '002'){
+                hasil = barang * 20000
+                window.alert("Total Pembayaran anda adalah :"+hasil)
+                uang = window.prompt("Masukkan uang : ")
+                kembalian = uang - hasil
+                window.alert("Kembalian anda adalah : " + kembalian)
+                console.log("uang user"+uang)
+
+            }else if(kode == '003'){
+                hasil = barang * 30000
+                window.alert("Total Pembayaran anda adalah :"+hasil)
+                uang = window.prompt("Masukkan uang : ")
+                kembalian = uang - hasil
+                window.alert("Kembalian anda adalah : " + kembalian)
+                console.log("uang user"+uang)
+
+            }else{
+                window.alert("Kode Barang tidak tersedia")
+            }
+        }
+        var btnsubmit = document.getElementById("btnsubmit")
+        btnsubmit.onclick = function(){
+       
+            hitung(kode.value,barang.value)
+      
+        
+            console.log(kode.value);
+            console.log(barang.value);
+        }
+    </script>
+</body>
+</html>
